@@ -1,6 +1,30 @@
-<div class='container'>
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <%= link_to "Go to About page", pages_about_path %>
-</div>
+<div class="container my-5">
+  <div class="row align-items-center">
+    
+    <!-- Left Side (Images) -->
+    <div class="col-md-6 text-center">
+      <div class="mb-4">
+        <%= image_tag "buy-books.avif", alt: "Buy Books", class: "img-fluid rounded shadow mb-3" %>
+        <h4 class="fw-bold">Buy Books</h4>
+      </div>
+      <div>
+        <%= image_tag "sell-books.avif", alt: "Sell Books", class: "img-fluid rounded shadow mb-3" %>
+        <h4 class="fw-bold">Sell Books</h4>
+      </div>
+    </div>
 
+    <!-- Right Side (Text) -->
+    <div class="col-md-6">
+      <h1 class="fw-bold">📚 Welcome to B-Olx</h1>
+      <p class="lead mt-3">
+        B-Olx is your one-stop platform for buying and selling books easily.  
+        Whether you are a student, reader, or collector, you can find affordable books or give your old ones a new home.  
+      </p>
+      <p>
+        Our goal is to connect book lovers and create a sustainable way to exchange knowledge.  
+        Start your journey today and become part of our growing community!
+      </p>
+      <%= link_to "Explore Books", books_path, class: "btn btn-primary btn-lg mt-3 shadow" %>
+    </div>
+  </div>
+</div>

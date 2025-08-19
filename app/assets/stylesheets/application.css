@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.container h1 {
+  color: #2c3e50;
+}
+
+img {
+  max-height: 250px;
+  object-fit: cover;
+}

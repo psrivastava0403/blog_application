@@ -1,0 +1,10 @@
+<h1>✏️ Editing Book</h1>
+
+<%= render "form", book: @book %>
+
+<br>
+
+<div>
+  <%= link_to "📖 Show this book", @book, class: "btn" %> |
+  <%= link_to "⬅️ Back to books", books_path, class: "btn" %>
+</div>

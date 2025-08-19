@@ -1,0 +1,21 @@
+<p class="notice"><%= notice %></p>
+
+<h1>📚 Books</h1>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <div class="book-card">
+      <%= render book %>
+      <p>
+        <%= link_to "Show this book", book, class: "btn" %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<!-- Pagination -->
+<div class="pag-bar mt-5 pt-5">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+
+<%= link_to "➕ New book", new_book_path, class: "btn" %>

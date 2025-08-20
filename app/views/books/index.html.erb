@@ -3,7 +3,7 @@
 <h1>📚 Books</h1>
 
 <div id="books">
-  <% @books.each do |book| %>
+  <% @books_data.each do |book| %>
     <div class="book-card">
       <%= render book %>
       <p>
@@ -14,8 +14,8 @@
 </div>
 
 <!-- Pagination -->
-<div class="pag-bar mt-5 pt-5">
+<div class="pag-bar mt-5 d-flex justify-content-center">
   <%== pagy_bootstrap_nav(@pagy) %>
 </div>
 
-<%= link_to "➕ New book", new_book_path, class: "btn" %>
+<%= link_to "➕ Add book", new_book_path, class: "btn" %>

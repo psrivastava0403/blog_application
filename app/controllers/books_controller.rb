@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: %i[show index]
 
   # GET /books or /books.json
   def index
@@ -9,6 +10,13 @@ class BooksController < ApplicationController
 
   # GET /books/1 or /books/1.json
   def show
+    if current_user 
+      if current_user.id != @book.user_id
+        @book.update(view: @book.view + 1)
+      end
+    else
+        @book.update(view: @book.view + 1)
+    end
   end
 
   # GET /books/new

@@ -23,4 +23,12 @@
     <strong>✍️ Writer:</strong> 
     <%= book.writer %>
   </p>
+  <p>
+    <strong>👁 Viewed By:</strong> 
+    <%= pluralize(book.view, "view") %>
+  </p>
+  <p>
+    <strong>👁 Owned By:</strong> 
+    <%= book.user.name %>
+  </p>
 </div>
